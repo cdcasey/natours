@@ -1,0 +1,23 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cdcasey/natours.git"
+  },
+  "author": "Chris Casey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cdcasey/natours/issues"
+  },
+  "homepage": "https://github.com/cdcasey/natours#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.9.3"
+  }
+}
