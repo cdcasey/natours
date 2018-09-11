@@ -28,14 +28,42 @@
         /* TRANDFORM/TRANSLTE 'BETTER' THAN MARGINS? */
         // also unskew the img
         transform: translateX(-3rem) skewX(12deg);
+        position: relative;
     }
 
     // Flexible images for responsive web design always need a width (or height)
     &__img {
         height: 100%;
+        transform: translateX(-4rem) scale(1.4);
+        transition: all 0.5s;
     }
 
     &__text {
         transform: skewX(12deg);
+    }
+
+    &__caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        text-align: center;
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        opacity: 0;
+        transition: all 0.5s;
+        // fixes a "shaking" at end of animation? Moves 1px to right. May not be necessary anymore.
+        backface-visibility: hidden;
+    }
+
+    &:hover &__caption {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    &:hover &__img {
+        transform: translateX(-4rem) scale(1);
+        filter: blur(3px) brightness(80%);
     }
 }
