@@ -19,6 +19,6 @@
   "homepage": "https://github.com/cdcasey/natours#readme",
   "dependencies": {},
   "devDependencies": {
-    "node-sass": "^4.9.3"
+    "node-sass": "^4.9.4"
   }
 }
