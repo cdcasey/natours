@@ -31,6 +31,9 @@ big-desk
 
 Use EMs so the break points will be adapted to user-set font sizes. Comments indicate defaults.
 Layout becomes dependent on font size (a good thing).
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
 */
 @mixin respond($breakpoint) {
     // <600px
