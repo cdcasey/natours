@@ -7,9 +7,24 @@
     box-sizing: inherit;
 }
 
-/* This will be 10px on a standard 16px UA. It defines what 1rem is.*/
 html {
+    /* This will be 10px on a standard 16px UA. It defines what 1rem is. 10/16 = 62.5% */
     font-size: 62.5%;
+
+    @include respond(tab-land) {
+        /* 9px on landscape tablets */
+        font-size: 56.25%;
+    }
+
+    @include respond(tab-port) {
+        /* 8px on phones & portrait-based tablets */
+        font-size: 50%;
+    }
+
+    @include respond(big-desk) {
+        /* 12px on large desktops */
+        font-size: 75%;
+    }
 }
 
 body {

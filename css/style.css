@@ -1,3 +1,21 @@
+/*
+     0 - 600px:  phone
+ 600px - 900px:  tablet protrait
+900px - 1200px:  tablet landscape
+   [1200-1800]:  default "normal" styles
+     1800px + :  large desktop
+
+$breakpoint arg:
+phone
+tab-port
+tab-land
+big-desk 
+
+1em = 16px
+
+Use EMs so the break points will be adapted to user-set font sizes. Comments indicate defaults.
+Layout becomes dependent on font size (a good thing).
+*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -34,9 +52,21 @@
   padding: 0;
   box-sizing: inherit; }
 
-/* This will be 10px on a standard 16px UA. It defines what 1rem is.*/
 html {
+  /* This will be 10px on a standard 16px UA. It defines what 1rem is. 10/16 = 62.5% */
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      /* 9px on landscape tablets */
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      /* 8px on phones & portrait-based tablets */
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      /* 12px on large desktops */
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }
