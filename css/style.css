@@ -569,11 +569,24 @@ body {
   .popup__left {
     width: 33.3%;
     display: table-cell; }
+    @media (max-width: 37.5em) {
+      .popup__left {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%; } }
   .popup__right {
     width: 66.7%;
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem; }
+    @media (max-width: 37.5em) {
+      .popup__right {
+        display: block;
+        background-color: rgba(245, 245, 245, 0.9);
+        width: 100%; } }
   .popup__img {
     display: block;
     width: 100%; }

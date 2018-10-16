@@ -27,6 +27,15 @@
     &__left {
         width: 33.3%;
         display: table-cell;
+
+        @include respond(phone) {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+        }
     }
 
     &__right {
@@ -34,6 +43,12 @@
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;
+
+        @include respond(phone) {
+            display: block;
+            background-color: rgba($color-white, $alpha: 0.9);
+            width: 100%;
+        }
     }
 
     &__img {
