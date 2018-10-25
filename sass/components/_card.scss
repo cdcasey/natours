@@ -182,7 +182,9 @@
     // Move back side to bottom on tablets and phones
     // It would probably be better to use a user-agent becuase
     // this won't get landscape tablets
-    @include respond(tab-port) {
+    // @include respond(tab-port) {
+    // Include smaller screens AND touch devices for tablets now
+    @media only screen and (max-width: 56.25em), only screen and (hover: none) {
         // no longer have two sides
         height: auto;
         border-radius: 3px;
