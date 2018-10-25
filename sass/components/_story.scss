@@ -28,17 +28,24 @@
         width: 15rem;
         height: 15rem;
         float: left;
-        // background-color: orangered;
-        -webkit-shape-outside: circle(50% at 50% 50%);
-        shape-outside: circle(50% at 50% 50%);
-        /* BORDER-RADIUS WOULD ALSO WORK */
-        // UPDATE: NO IT WOULD NOT WHEN THE IMG IS PRESENT
-        -webkit-clip-path: circle(50% at 50% 50%);
-        clip-path: circle(50% at 50% 50%);
         /* TRANDFORM/TRANSLTE 'BETTER' THAN MARGINS? */
         // also unskew the img
         transform: translateX(-3rem) skewX(12deg);
         position: relative;
+        overflow: hidden;
+        border-radius: 50%;
+
+        @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+            /* BORDER-RADIUS WOULD ALSO WORK */
+            // UPDATE: NO IT WOULD NOT WHEN THE IMG IS PRESENT
+            // Maybe with overflow: hidden?
+            // shape-outside makes the text 'flow' around the circle tho. border-radius (or clip-path) alone does not.
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+            -webkit-shape-outside: circle(50% at 50% 50%);
+            shape-outside: circle(50% at 50% 50%);
+            border-radius: none;
+        }
 
         @include respond(phone) {
             transform: translateX(-3rem) skewX(0);
